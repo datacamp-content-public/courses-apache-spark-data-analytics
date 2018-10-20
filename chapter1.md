@@ -1,9 +1,9 @@
 ---
-title: Test
-description: Test
+title: 'Creating a Model'
+description: ""
 ---
 
-## An exercise title written in sentence case
+## Splitting data into train and test sets
 
 ```yaml
 type: NormalExercise
@@ -58,3 +58,16 @@ The instructions that follow should be in bullet point form with clear guidance 
 # Update this to something more informative.
 success_msg("Some praise! Then reinforce a learning objective from the exercise.")
 ```
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: VideoExercise
+key: 53f0bd0542
+xp: 50
+```
+
+`@projector_key`
+d12cf9b568130da37e9a5255e79049fc
