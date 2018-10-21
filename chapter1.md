@@ -1,5 +1,5 @@
 ---
-title: 'Creating a Model'
+title: 'Train/Test Split'
 description: ""
 ---
 
@@ -67,7 +67,7 @@ success_msg("Some praise! Then reinforce a learning objective from the exercise.
 
 ---
 
-## Insert exercise title here
+## Splitting Data
 
 ```yaml
 type: VideoExercise
@@ -80,7 +80,7 @@ d12cf9b568130da37e9a5255e79049fc
 
 ---
 
-## Insert exercise title here
+## Splitting Data (exercise)
 
 ```yaml
 type: NormalExercise
@@ -131,5 +131,5 @@ train, test = power.randomSplit([0.7, 0.3], seed=17)
 
 `@sct`
 ```{python}
-
+success_msg("Excellent! You are now a master of the Train/Test Split.")
 ```
