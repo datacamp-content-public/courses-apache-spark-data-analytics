@@ -88,7 +88,7 @@ key: 6cad38cf21
 xp: 100
 ```
 
-You'll be splitting the Pima Indians data into training and testing sets.
+You'll be splitting the Height/Mass/Age data into training and testing sets.
 
 `@instructions`
 - Check that there are a reasonable number of records available for splitting.
@@ -100,7 +100,13 @@ You'll be splitting the Pima Indians data into training and testing sets.
 
 `@pre_exercise_code`
 ```{python}
-baseball-height-weight-age.csv
+from pyspark.sql import SparkSession
+from pyspark.ml.feature import VectorAssembler
+
+baseball = spark.read.csv('baseball-height-weight-age.csv', sep=';', header=True, inferSchema=True)
+
+assembler = VectorAssembler(inputCols = ['height', 'age'], outputCol = 'features')
+baseball = assembler.transform(baseball).select(['features', 'mass'])
 ```
 
 `@sample_code`
