@@ -71,3 +71,43 @@ xp: 50
 
 `@projector_key`
 d12cf9b568130da37e9a5255e79049fc
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: NormalExercise
+key: 6cad38cf21
+xp: 100
+```
+
+You'll be splitting the Pima Indians data into training and testing sets.
+
+`@instructions`
+- Check that there are a reasonable number of records available for splitting.
+- Split the data in a 80:20 ratio, setting the random seed to 17.
+
+`@hint`
+- Use the method which counts the number of records in a DataFrame.
+- The randomSplit() method accepts two arguments: the proportions for the split (as a list) and a random seed.
+
+`@pre_exercise_code`
+```{python}
+
+```
+
+`@sample_code`
+```{python}
+
+```
+
+`@solution`
+```{python}
+
+```
+
+`@sct`
+```{python}
+
+```
