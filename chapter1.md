@@ -29,7 +29,13 @@ The instructions that follow should be in bullet point form with clear guidance 
 
 `@pre_exercise_code`
 ```{python}
-# Load datasets and packages here.
+from pyspark.sql import SparkSession
+from pyspark.ml.feature import VectorAssembler
+
+pima = spark.read.csv('pima-indians.csv', sep=';', header=True, inferSchema=True)
+
+assembler = VectorAssembler(inputCols = ['temperature', 'vacuum', 'pressure', 'humidity'], outputCol = 'features')
+pima = assembler.transform(pima).select(['features', 'power'])
 ```
 
 `@sample_code`
@@ -94,7 +100,7 @@ You'll be splitting the Pima Indians data into training and testing sets.
 
 `@pre_exercise_code`
 ```{python}
-
+baseball-height-weight-age.csv
 ```
 
 `@sample_code`
